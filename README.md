@@ -14,6 +14,23 @@ The Raw data has been stored in MS-SQL. SQL Server has been used to create a Dat
 
 Raw data received from Virgin Money. Database Data tabulating all leavers, hires since 2013 and any Grade or Position Changes that any employee underwent. 
 
+## General Issues with Raw Data
+
+
+There are discrepencies through the data for the Ages of staff. If a staff member has left (present in Employee_Leavers_all_time) then there age is displayed as their age upon hire, else their age is the employees current age ie: 
+Employee Number	Gender	age	grade	Hire Date
+0006847		Female	15	Band E	1971-07-19 00:00:00.000
+0008068		Female	63	Band E	1972-10-29 00:00:00.000
+
+Employee 0008068 cannot have been 63 when hired into company and still be in employment.
+Likewise Employee 0006847 cannot have been hired in 1971 and upon leaving be 15.
+
+There also appears to be issues with location information for the individual employees. 2173 (34.16%)of records are stated to be based in Gosforth and 1207 (18.97%) in Jubilee House. Jubilee House is in Gosforth and is the HQ for Virgin Money, making it likely that these are the same office locations. 
+
+That would mean 53.13% of all staff are based at HQ, would does not seem plausible. 
+
+The Assumption that has been used is that all employees based in branch locations prior to a certain date have been later 'Re-assigned' to Gosforth and Jubilee house. Reasons could be due to the Virgin Money aquirement of 'Northern Rock' or due to some other change of the data warehouse the Raw data is derived from. 
+
 ## Employ_hires_All_Time 
 
 # Overview (Column Info):
@@ -168,7 +185,101 @@ It is unclear what consitutes a 'Organisational Change'
 Various techniques were used to create 4 tables upon which analysis could be performed from the Raw data provided. These were Employee Profiles, Leaver Profiles, Location Profiles and Appraisal Goal Analysis. 
 
 ## Store Profiles
-T
+
+# Introduction
+Raw tables: 
+* Hires 
+* Leavers
+* Grade Change 
+* Position Chance 
+
+# Overview (Column Info)
+* Locations
+* LocationID
+* Total Staff
+* Males
+* Females
+* Percentage Female
+* Band C
+* Band D
+* Band E
+* Staff Left 2012
+* Staff Hired 2012
+* Staff Left 2013
+* Staff Hired 2013
+* Staff Left 2014
+* Staff Hired 2014
+* Staff Left 2015
+* Staff Hired 2015
+* Staff Left 2016
+* Staff Hired 2016
+* Staff Left 2017
+* Staff Hired 2017
+
+# Profile 
+* 90 Distinct Locations
+
+# Comments 
+
+Raw data is not correct for some locations i.e there are several different entries for Edinburgh locations. This makes it difficult to distinguish between office locations such as in Norwich and the branch location also there. 
+
+Staff location within Jubilee house is sub-divided in to building and floor location in the raw data so this has been grouped together.
+
+The parameters the stores have been profile by is the Total number of staff, the number of male and female employees and the percentage of staff that are Female. The locations are also measured by the number of band C,D,E Employees. 
+As the highest grade a store manager can be is Band D, no Band C or other upper management staff members are found in any of the bank branches. All locations with Band C staff are in regional offices  such as the ones located in Chester, Edinburgh, Gosforth, London and Norwich. 
+
+The profiling of a stores "make-up" was attempted inorder to see if there are particualr attributes or group of attributes that could lead to a high rate of Band-E Males leaving the company, some indicators that were proposed were geography, the gender percentage (is a male employee more likely to leave if there are fewer male employees already in that location). 
+However due to the staff location issues mentioned previoulsy (53% of staff "in" Gosforth) a true understanding of who is working in each store could not be created, this is evident from the fact that 43 of the store locations have fewer than 9 employees, which would seem unlikely. 
+
+It should be noted that this "total" is total number of staff who have EVER worked there, not the value currently working in that location. 
+
+
+## Leavers Profiles: 
+
+# Introduction
+
+# Overview (Column Info)
+
+# Profile 
+
+# Comments 
+
+# Issues 
+
+## Leavers Profiles: 
+
+# Introduction
+
+# Overview (Column Info)
+
+# Profile 
+
+# Comments 
+
+# Issues 
+
+## All Employee Profiles: 
+
+# Introduction
+
+# Overview (Column Info)
+
+# Profile 
+
+# Comments 
+
+# Issues 
+
+## Goal Analysis
+
+### Analysis 
+
+## Python 
+
+## Machine Learning 
+
+## Neo4J
+
 
 
 
