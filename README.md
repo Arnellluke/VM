@@ -113,11 +113,62 @@ Position changes can constitute a grade change, or the new position can be of th
 * New Section (P)
 * New Team (P)
 
-# Profile 
-
-*Records - 2955  
+# Profile:
+* Records - 2955  
 * Distinct Employees - 1881 
 
+* Assignment Start Date from 2013-12-01 to 2018-01-22
+
+# Comments/Issues 
+
+## Grade Change All Time:
+
+# Comments
+All Position Changes that result in a grade changes.
+
+Grades in the Position and and Grade Change tables are more granular than all other tables. Breaking down into sub-grades i.e. E-E2 and D-D1BC.
+
+A position is not always indicative of the grade the employee has. 
+For example 3 'Assistant Management Accountant's' have the Grades: D-D2, D-D3FI and D-D4.
+
+It has been assumed that the numerical component of the grade change is in descending rank i.e E-E1 > E-E2.
+It is unclear what consitutes a 'Organisational Change'
+
+# Overview (Column Info):
+
+* EmployeeNumber
+* Gender
+* Age
+* Position Title (Previous)
+* New Position Title
+* Employment Category
+* Grade Name (Previous)
+* Grade Name
+* Effective Start Date (P)
+* Organsational Change (P)
+* Function (Previous)
+* Division (Previous)(P)
+* Department (Previous)(P)
+* Section (Previous)(P)
+* Team (Previous) (P) 
+* Function(P)
+* Division(P)
+* Deparment(P)
+* Section (P)
+* Team (P)
+
+# Profile: 
+
+# Issues: 
+
+### Transformed Tables for Analsis
+
+## Introduction 
+
+Various techniques were used to create 4 tables upon which analysis could be performed from the Raw data provided. These were Employee Profiles, Leaver Profiles, Location Profiles and Appraisal Goal Analysis. 
+
+## Store Profiles
+T
 
 
 
