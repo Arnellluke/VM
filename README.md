@@ -1,4 +1,4 @@
-### Virgin Money Employee Churn-Analysis
+# Virgin Money Employee Churn-Analysis
 
 Analysis of why Male "Band E" Employees working in customer serivce are leaving Virgin Money.
 
@@ -10,7 +10,7 @@ The raw data for this analysis has been provided by Virgin Money and includes da
 The Raw data has been stored in MS-SQL. SQL Server has been used to create a Datawarehouse, transforming the data for analytical purposes. This transformed data has then been analysed using Python, with packages such as "SKLearn" and "Plotly" to visualise the data and to provide machine learning functionality that will predict the liklihood of employees of leaving. Indicating who is "High risk". Feature analysis has also been used to 
 
 
-### Raw Data
+# Raw Data
 
 Raw data received from Virgin Money. Database Data tabulating all leavers, hires since 2013 and any Grade or Position Changes that any employee underwent. 
 
@@ -31,9 +31,9 @@ That would mean 53.13% of all staff are based at HQ, would does not seem plausib
 
 The Assumption that has been used is that all employees based in branch locations prior to a certain date have been later 'Re-assigned' to Gosforth and Jubilee house. Reasons could be due to the Virgin Money aquirement of 'Northern Rock' or due to some other change of the data warehouse the Raw data is derived from. 
 
-## Employ_hires_All_Time 
+## Employ hires All Time 
 
-# Overview (Column Info):
+### Overview (Column Info) 
 * Payroll Number 
 * Gender
 * Age
@@ -51,7 +51,7 @@ The Assumption that has been used is that all employees based in branch location
 * Location Name 
 * Location Postal Code
 
-# Profile
+### Profile
 * Records - 2011 
 * Distinct Employees - 1955
 * Males 			- 899 (44.70%)
@@ -63,7 +63,7 @@ The Assumption that has been used is that all employees based in branch location
 
 * Hire Dates from  2013-12-02 to 2018-01-04
 
-# Comments
+### Comments
 
 ## Leavers_all_time 
 
@@ -87,7 +87,7 @@ The Assumption that has been used is that all employees based in branch location
 * Location Name 
 * Location Postal Code
 
-# Profile
+### Profile
 * Records - 1568 
 * Distinct Employees - 1538
 * Males 			- 716 (45.66%)
@@ -100,14 +100,14 @@ The Assumption that has been used is that all employees based in branch location
 * Hire Dates from 1971-07-19 to 2017-11-07
 * Termindation Dates from 2013-12-06 t0 2018-02-08
 
-# Comments/Issues
+### Comments/Issues
 
 ## Position Changes All Time:
 
 Data on an employees position change within the company. 
 Position changes can constitute a grade change, or the new position can be of the same grade.
 
-# Overview (Column Info):
+### Overview (Column Info):
 * Employee/Contingent Number
 * Gender
 * Age
@@ -130,17 +130,17 @@ Position changes can constitute a grade change, or the new position can be of th
 * New Section (P)
 * New Team (P)
 
-# Profile:
+### Profile:
 * Records - 2955  
 * Distinct Employees - 1881 
 
 * Assignment Start Date from 2013-12-01 to 2018-01-22
 
-# Comments/Issues 
+### Comments/Issues 
 
 ## Grade Change All Time:
 
-# Comments
+### Comments
 All Position Changes that result in a grade changes.
 
 Grades in the Position and and Grade Change tables are more granular than all other tables. Breaking down into sub-grades i.e. E-E2 and D-D1BC.
@@ -151,7 +151,7 @@ For example 3 'Assistant Management Accountant's' have the Grades: D-D2, D-D3FI 
 It has been assumed that the numerical component of the grade change is in descending rank i.e E-E1 > E-E2.
 It is unclear what consitutes a 'Organisational Change'
 
-# Overview (Column Info):
+### Overview (Column Info):
 
 * EmployeeNumber
 * Gender
@@ -174,11 +174,11 @@ It is unclear what consitutes a 'Organisational Change'
 * Section (P)
 * Team (P)
 
-# Profile: 
+### Profile: 
 
-# Issues: 
+### Issues: 
 
-### Transformed Tables for Analsis
+# Transformed Tables for Analsis
 
 ## Introduction 
 
@@ -186,14 +186,14 @@ Various techniques were used to create 4 tables upon which analysis could be per
 
 ## Store Profiles
 
-# Introduction
+### Introduction
 Raw tables: 
 * Hires 
 * Leavers
 * Grade Change 
 * Position Chance 
 
-# Overview (Column Info)
+### Overview (Column Info)
 * Locations
 * LocationID
 * Total Staff
@@ -216,10 +216,10 @@ Raw tables:
 * Staff Left 2017
 * Staff Hired 2017
 
-# Profile 
+### Profile 
 * 90 Distinct Locations
 
-# Comments 
+### Comments 
 
 Raw data is not correct for some locations i.e there are several different entries for Edinburgh locations. This makes it difficult to distinguish between office locations such as in Norwich and the branch location also there. 
 
@@ -236,43 +236,43 @@ It should be noted that this "total" is total number of staff who have EVER work
 
 ## Leavers Profiles: 
 
-# Introduction
+### Introduction
 
-# Overview (Column Info)
+### Overview (Column Info)
 
-# Profile 
+### Profile 
 
-# Comments 
+### Comments 
 
-# Issues 
+### Issues 
 
 ## Leavers Profiles: 
 
-# Introduction
+### Introduction
 
-# Overview (Column Info)
+### Overview (Column Info)
 
-# Profile 
+### Profile 
 
 # Comments 
 
-# Issues 
+### Issues 
 
 ## All Employee Profiles: 
 
-# Introduction
+### Introduction
 
-# Overview (Column Info)
+### Overview (Column Info)
 
-# Profile 
+### Profile 
 
-# Comments 
+### Comments 
 
-# Issues 
+### Issues 
 
 ## Goal Analysis
 
-### Analysis 
+# Analysis 
 
 ## Python 
 
